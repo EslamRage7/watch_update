@@ -1,0 +1,340 @@
+:root {
+  --main-color--: #927a70;
+  --bg-color--: #080808;
+}
+body {
+  background-color: var(--bg-color--);
+  font-family: "Oswald", sans-serif;
+}
+/* --------------------------------start top-------------------------------- */
+.up {
+  color: var(--main-color--);
+  z-index: 541654;
+  border: 1px solid var(--main-color--);
+  background: var(--bg-color--);
+  padding: 6px 12px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 5%;
+  right: -10%;
+  transition: 0.3s;
+}
+.up.show {
+  right: 5%;
+}
+.up:hover {
+  background: var(--main-color--);
+  color: white;
+}
+/* --------------------------------end top-------------------------------- */
+/* start nav-one */
+.first nav {
+  background: linear-gradient(to right, #0b0b0b, #0b0b0b, #0b0b0b, #927a704a);
+  height: 50px;
+}
+.first .nav .a {
+  display: flex;
+  flex-direction: row;
+}
+nav .shopping {
+  position: relative;
+}
+nav .shopping::after {
+  content: "2";
+  position: absolute;
+  right: 10%;
+  top: -8px;
+  border-radius: 20px;
+  color: white;
+  background-color: var(--main-color--);
+  font-size: 10px;
+  padding: 2px 5px;
+}
+nav .one {
+  font-size: 12px;
+  margin-top: 10px;
+  font-style: italic;
+}
+.one .icon {
+  font-size: 15px;
+  cursor: pointer;
+}
+@media (max-width: 652px) {
+  .first nav .nav-item {
+    margin-left: 13px;
+  }
+  nav .one {
+    font-size: 11px;
+  }
+  nav .shopping::after {
+    content: "2";
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--main-color--);
+    font-size: 10px;
+    padding: 1px 8px;
+  }
+}
+@media (max-width: 452px) {
+  .first nav .nav-item {
+    margin-left: 13px;
+  }
+  nav .one {
+    font-size: 9px;
+  }
+}
+/* --------------------------------start nav-------------------------------- */
+nav {
+  background-color: var(--bg-color--);
+  /* background: linear-gradient(to right, #0b0b0b, #0b0b0b, #0b0b0b, #927a704a); */
+  z-index: 2456;
+}
+.navbar .nav-item a {
+  color: white;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+.navbar .nav-item a::after {
+  width: 0px;
+  content: "";
+  height: 2px;
+  position: absolute;
+  background-color: var(--main-color--);
+  left: 0%;
+  top: 90%;
+}
+@media (max-width: 1000px) {
+  .navbar .nav-item a {
+    width: fit-content;
+  }
+}
+.navbar .nav-item a:hover::after {
+  transition: 0.3s;
+  width: 100%;
+  content: "";
+  height: 2px;
+  position: absolute;
+}
+.navbar .nav-item a:hover {
+  color: var(--main-color--);
+  transition: 0.3s;
+}
+.navbar .nav-item .active {
+  color: var(--main-color--);
+}
+.navbar .phone .icon {
+  transition: 0.3s;
+  font-size: 20px;
+  margin-right: 10px;
+  color: var(--main-color--);
+  transform: rotate(-50deg);
+}
+.navbar p {
+  transition: 0.3s;
+  margin-top: 10px;
+  color: white;
+  font-weight: 600;
+  position: relative;
+}
+.navbar span {
+  font-size: 13px;
+  font-style: italic;
+  margin-left: 10px;
+  color: var(--main-color--);
+}
+.navbar .navbar-toggler {
+  color: var(--main-color--);
+  font-size: 16px;
+  border-color: var(--main-color--);
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+/* --------------------------------end nav-------------------------------- */
+/* --------------------------------start landing-------------------------------- */
+.landing {
+  margin-top: -49px;
+  background: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.landing .intro-text h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+.landing .button {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+  color: var(--main-color--);
+  border: 1px solid var(--main-color--);
+}
+.landing .button:hover {
+  background-color: var(--main-color--);
+  color: white;
+}
+@media (max-width: 452px) {
+  .landing .button {
+    margin-top: 10px;
+  }
+}
+/* --------------------------------end landing-------------------------------- */
+/* --------------------------------start about-------------------------------- */
+.about .title h3 {
+  position: relative;
+  font-size: 30px;
+  width: fit-content;
+}
+.about .title h3::before {
+  content: "";
+  width: 125%;
+  background-color: var(--main-color--);
+  height: 2px;
+  position: absolute;
+  bottom: -15px;
+}
+.about .title p {
+  line-height: 2;
+  font-weight: 400;
+  font-size: 17px;
+}
+@media (max-width: 752px) {
+  .about .title h3 {
+    margin-top: 15px;
+  }
+}
+/* --------------------------------end about-------------------------------- */
+/* --------------------------------start collection-------------------------------- */
+.collection h1 {
+  width: fit-content;
+  position: relative;
+  font-size: 30px;
+  font-weight: 500;
+}
+.collection h1::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  background-color: var(--main-color--);
+  height: 2px;
+  bottom: -13px;
+  left: 0%;
+}
+.collection h1::before {
+  content: "";
+  position: absolute;
+  width: 24%;
+  background-color: var(--main-color--);
+  height: 2px;
+  bottom: -17px;
+  left: 0%;
+}
+.collection .watch {
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255, 20%);
+  padding: 15px;
+  transition: 0.3s;
+  margin-right: 10px;
+  width: 355px;
+}
+.collection .watch:hover {
+  box-shadow: 0px 0px 7px 0px rgba(217, 213, 213, 0.273);
+}
+.collection img {
+  height: 300px;
+}
+.collection h2 {
+  font-size: 25px;
+}
+.collection p {
+  font-size: 18px;
+}
+@media (max-width: 652px) {
+  .collection .watch {
+    width: 330px;
+    margin: 10px auto;
+  }
+}
+/* --------------------------------end collection-------------------------------- */
+/* --------------------------------start clints-------------------------------- */
+.clints .title h1 {
+  position: relative;
+  font-size: 30px;
+}
+.clints .card {
+  margin: 0px auto;
+  padding: 10px;
+  border: 2px solid rgb(255, 255, 255, 20%);
+  background-color: var(--bg-color--);
+  transition: 0.3s;
+}
+.clints .card:hover {
+  box-shadow: 0px 0px 7px 0px rgba(217, 213, 213, 0.273);
+}
+.clints img {
+  width: 150px;
+  height: 100px;
+  opacity: 0.7;
+}
+.clints .card h5 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.clints .card p {
+  line-height: 2;
+  font-weight: 400;
+  font-size: 15px;
+}
+/* --------------------------------end clints-------------------------------- */
+/* --------------------------------start footer-------------------------------- */
+.footer {
+  background-color: #80808024;
+}
+.footer .head {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+.footer h3 {
+  font-style: italic;
+  font-size: 12px;
+}
+.footer p {
+  font-size: 12px;
+}
+.footer ul li {
+  font-size: 13px;
+  font-weight: 600;
+}
+.footer input:focus {
+  outline: none;
+}
+.footer input {
+  background-color: transparent;
+  border: 1px solid #927a7070;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+.footer button {
+  background-color: var(--main-color--);
+  border: 1px solid var(--main-color--);
+  font-size: 13px;
+  width: 100px;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin-left: -2px;
+}
+.footer .icon i {
+  cursor: pointer;
+}
+/* --------------------------------end footer-------------------------------- */
