@@ -39,16 +39,16 @@ body {
 nav .shopping {
   position: relative;
 }
-nav .shopping::after {
-  content: "2";
-  position: absolute;
-  right: 10%;
+nav .shopping span {
+  left: 45%;
   top: -8px;
   border-radius: 20px;
   color: white;
   background-color: var(--main-color--);
   font-size: 10px;
   padding: 2px 5px;
+  position: absolute;
+  font-style: normal;
 }
 nav .one {
   font-size: 12px;
@@ -66,17 +66,6 @@ nav .one {
   nav .one {
     font-size: 11px;
   }
-  nav .shopping::after {
-    content: "2";
-    position: absolute;
-    left: 10px;
-    top: -10px;
-    border-radius: 20px;
-    color: white;
-    background-color: var(--main-color--);
-    font-size: 10px;
-    padding: 1px 8px;
-  }
 }
 @media (max-width: 452px) {
   .first nav .nav-item {
@@ -84,6 +73,32 @@ nav .one {
   }
   nav .one {
     font-size: 9px;
+  }
+}
+@media (min-width: 579px) and (max-width: 995px) {
+  nav .shopping span {
+    left: 60%;
+    top: -8px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--main-color--);
+    font-size: 10px;
+    padding: 2px 5px;
+    position: absolute;
+    font-style: normal;
+  }
+}
+@media (max-width: 752px) {
+  nav .shopping span {
+    left: 3px;
+    top: -8px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--main-color--);
+    font-size: 10px;
+    padding: 2px 5px;
+    position: absolute;
+    font-style: normal;
   }
 }
 /* --------------------------------start nav-------------------------------- */
@@ -240,25 +255,55 @@ nav {
   left: 0%;
 }
 .collection .watch {
+  position: relative;
   border-radius: 5px;
   border: 1px solid rgb(255, 255, 255, 20%);
   padding: 15px;
   transition: 0.3s;
   margin-right: 10px;
-  width: 355px;
+  height: 400px;
 }
 .collection .watch:hover {
-  box-shadow: 0px 0px 7px 0px rgba(217, 213, 213, 0.273);
+  box-shadow: 0px 0px 7px 0px rgba(217, 213, 213, 0.454);
 }
 .collection img {
   height: 300px;
 }
-.collection h2 {
-  font-size: 25px;
+.collection h3 {
+  font-size: 20px;
 }
 .collection p {
   font-size: 18px;
+  font-weight: bold;
+  padding: 8px 30px;
+  border-radius: 20px;
+  color: var(--main-color--);
+  background-color: var(--bg-color--);
+  width: fit-content;
+  cursor: pointer;
+  margin: 0px auto;
 }
+.collection .layer {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(var(--bg-color--), var(--main-color--));
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.collection .watch:hover .layer {
+  height: 25%;
+}
+.collection .layer span {
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 @media (max-width: 652px) {
   .collection .watch {
     width: 330px;
